@@ -5,7 +5,7 @@
               usermod -a -G docker ec2-user
               curl -sL https://rpm.nodesource.com/setup_14.x | bash -
               yum install -y nodejs
-              git clone https://github.com/ClementDaniel/Node.js-website /home/ec2-user/my-node-app
+              git clone https://github.com/Sowee1920/GODFRED-TECH-ASS-/home/ec2-user/my-node-app
               cd /home/ec2-user/my-node-app
               docker build -t my-node-app .
               docker run -d -p 8080:8080 my-node-app 
