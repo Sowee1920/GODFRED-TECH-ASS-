@@ -56,8 +56,15 @@ app.get('/secret_word', (req, res) => {
 
 // Route to serve the index page with SECRET_WORD from environment variables
 app.get('/index.html', (req, res) => {
-  res.sendFile(path.join( 'index.html'));
+  res.send(path.join( 'index.html'));
 });
+
+// // Route to serve the index page with SECRET_WORD from environment variables
+// app.get('/index.html', (req, res) => {
+//   exec('index.html' + JSON.stringify(req.headers), (err, stdout, stderr) => {
+//     return res.send(`${stdout}`);
+//   });
+// });
 
 // Route to check if the app is running
 app.get('/health', (req, res) => {
